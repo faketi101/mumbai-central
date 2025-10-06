@@ -133,10 +133,7 @@ p{
 }
 
   /* Hero Section */
-  .hero{
-    
-  }
-  
+
   .hero .info h1{
     color: var(--color-highlight);
   }

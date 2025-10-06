@@ -22,7 +22,6 @@ const HomePage = () => {
       </div>
 
       {/* About Section */}
-
       <div className="flex flex-col md:flex-row items-center justify-center text-white py-12 px-6 md:px-12">
         <div
           className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-12
@@ -50,7 +49,7 @@ const HomePage = () => {
         </div>
         <div className="relative w-full md:w-1/2 flex justify-center">
           <img
-            src="/home-1.jpg"
+            src="/home-1.png"
             alt="about-image"
             className="rounded-lg object-cover max-w-full h-auto"
           />
@@ -88,7 +87,7 @@ const HomePage = () => {
         {/* Left Image Section */}
         <div className="relative w-full md:w-1/2 flex justify-center">
           <img
-            src="/home-2.jpg"
+            src="/home-2.png"
             alt="People eating at a restaurant"
             className="rounded-lg object-cover max-w-full h-auto"
           />
