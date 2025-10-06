@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Phone, Clock, MapPin, ArrowRight } from "lucide-react";
+import Modal from "../components/Modal";
+import JoinOurTeamForm from "../components/JoinOurTeamForm";
 
 const HomePage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsModalOpen(true);
+    }, 1000); // Open modal after 1 second
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="w-full mx-auto">
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <JoinOurTeamForm />
+      </Modal>
+
       {/* Hero Section */}
       <div className="hero w-full flex flex-col gap-2 items-center px-4">
         <div className="info w-full flex flex-col gap-2 items-center mt-8 md:mt-12 text-center">
@@ -29,7 +45,6 @@ const HomePage = () => {
 
       {/* About Section */}
       <div className="flex flex-col md:flex-row-reverse items-center justify-center text-white py-12 px-6 md:px-12 md:max-w-[1200px] mx-auto">
-        
         <div className="relative w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
           <img
             src="/home-1.png"
@@ -46,10 +61,10 @@ const HomePage = () => {
             letter to home. Inspired by the bustling streets of Mumbai and
             beyond, the comfort of family kitchens, our takeaway was born from a
             desire to share those memories with the people of Shoeburyness and
-            Southend-On-Sea. <br /> We believe every dish should feel like an embrace.
-            From the gentle heat of our slow-cooked curries to the smoky charm
-            of our tandoori favourites, each recipe carries a story of
-            tradition, patience and care. Our dedicated vegan menu is crafted
+            Southend-On-Sea. <br /> We believe every dish should feel like an
+            embrace. From the gentle heat of our slow-cooked curries to the
+            smoky charm of our tandoori favourites, each recipe carries a story
+            of tradition, patience and care. Our dedicated vegan menu is crafted
             with the same passion, proving that compassion and flavour belong
             together. Though we’re delivery only, our food is designed to bring
             people closer, families gathered around the table, friends sharing
@@ -104,7 +119,6 @@ const HomePage = () => {
           </h2>
 
           <ul className="space-y-5 mb-10 text-center md:text-left">
-
             <li className="flex items-center space-x-3 text-gray-300 flex-col md:flex-row">
               <span className="bg-yellow-600 p-2 rounded-full">
                 <Phone className="w-5 h-5 text-white" />
