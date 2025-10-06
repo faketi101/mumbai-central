@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mumbai Central | Classic Indian Cuisine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fffbee;
+        color: #a65a00;
+      }
+      .underline-link {
+        border-bottom: 2px solid #d4a017;
+        padding-bottom: 2px;
+        transition: color 0.3s;
+      }
+      .underline-link:hover {
+        color: #000;
+      }
+      .btn {
+        border: 1px solid #d4a017;
+        color: #a65a00;
+        padding: 0.75rem 2rem;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      .btn:hover {
+        background-color: #d4a017;
+        color: #fffbee;
+      }
+    </style>
+  </head>
+  <body class="text-center flex flex-col items-center justify-start">
+    <!-- Navigation -->
+    <nav class="w-full flex justify-center items-center gap-10 mt-6 text-lg font-semibold">
+      <a href="#" class="underline-link">HOME</a>
+      <a href="#" class="underline-link">MENU</a>
+      <a href="#" class="underline-link">ABOUT</a>
+
+      <!-- Logo -->
+      <div class="mx-6">
+        <img
+          src="./logo.png"
+          alt="Mumbai Central Logo"
+          class="w-48 mx-auto"
+        />
+      </div>
+
+      <a href="#" class="underline-link">CAREERS</a>
+      <a href="#" class="underline-link">REWARD</a>
+      <a href="#" class="underline-link">CONTACT</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="mt-8">
+      <p class="text-xl font-semibold text-[#a65a00]">01702 292 200</p>
+      <p class="text-lg font-semibold text-[#a65a00] mt-2">
+        7 DAYS A WEEK 4:30PM – 10PM
+      </p>
+
+      <div class="flex justify-center gap-4 mt-6">
+        <a href="#" class="btn">ORDER ONLINE</a>
+        <a href="#" class="btn">ALLERGENS</a>
+      </div>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="mt-8 w-[800px]">
+      <img
+        src="./hero-image.jpg"
+        alt="Mumbai Central Building"
+        class="w-full h-auto"
+      />
+    </div>
+  </body>
+</html>
+
