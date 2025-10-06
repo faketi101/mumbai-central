@@ -25,7 +25,7 @@ const Header = () => {
             className="w-36 hover:opacity-90 transition-opacity"
           />
         </Link>
-        <button onClick={toggleMenu} className="text-gray-800 focus:outline-none z-[10000]">
+        <button onClick={toggleMenu} className="text-primary focus:outline-none z-[10000]">
           {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </nav>

@@ -28,7 +28,15 @@ const HomePage = () => {
       </div>
 
       {/* About Section */}
-      <div className="flex flex-col md:flex-row-reverse items-center justify-center text-white py-12 px-6 md:px-12">
+      <div className="flex flex-col md:flex-row-reverse items-center justify-center text-white py-12 px-6 md:px-12 md:max-w-[1200px] mx-auto">
+        
+        <div className="relative w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
+          <img
+            src="/home-1.png"
+            alt="about-image"
+            className="rounded-lg object-cover w-full max-w-md h-auto"
+          />
+        </div>
         <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-12">
           <h1 className="text-3xl md:text-4xl font-bold text-primary uppercase text-center md:text-left">
             About Mumbai Central
@@ -49,13 +57,6 @@ const HomePage = () => {
             Central, every order is more than a meal, it’s a warm connection,
             lovingly cooked and delivered to your door
           </p>
-        </div>
-        <div className="relative w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
-          <img
-            src="/home-1.png"
-            alt="about-image"
-            className="rounded-lg object-cover w-full max-w-md h-auto"
-          />
         </div>
       </div>
 
