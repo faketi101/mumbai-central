@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FileText, Users, ClipboardCheck, Handshake } from "lucide-react";
 import { ChevronDown, ChevronUp, Briefcase } from "lucide-react";
+import JoinOurTeamForm from "../components/JoinOurTeamForm";
 
 const steps = [
   {
@@ -57,6 +58,7 @@ const positions = [
 ];
 const CareerPage = () => {
   const [open, setOpen] = useState("front");
+  const [showJoinForm, setShowJoinForm] = useState(false);
 
   const toggle = (key) => {
     setOpen(open === key ? null : key);
@@ -181,9 +183,20 @@ const CareerPage = () => {
             </div>
           ))}
 
-          <button className="mt-6 bg-yellow-600 text-white font-semibold py-3 px-8 rounded-xl hover:bg-yellow-700 transition w-fit self-center md:self-start">
+          <button 
+            onClick={() => setShowJoinForm(true)}
+            className="mt-6 bg-yellow-600 text-white font-semibold py-3 px-8 rounded-xl hover:bg-yellow-700 transition w-fit self-center md:self-start"
+          >
             APPLY NOW
           </button>
+          
+          {showJoinForm && (
+            <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50 p-4" onClick={() => setShowJoinForm(false)}>
+              <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+                <JoinOurTeamForm onClose={() => setShowJoinForm(false)} />
+              </div>
+            </div>
+          )}
         </div>
       </div>
 

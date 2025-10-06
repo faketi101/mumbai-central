@@ -1,20 +1,17 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const location = useLocation();
-  
+
   // Helper function to determine if a link is active
   const isActive = (path) => {
-    return location.pathname === path ? 'border-b-2 border-[#d4a017]' : '';
+    return location.pathname === path ? "border-b-2 border-[#d4a017]" : "";
   };
 
   return (
     <nav className="w-full flex justify-center items-center gap-10 mt-6 text-lg font-semibold">
-      <Link 
-        to="/" 
-        className={`underline-link ${isActive('/')}`}
-      >
+      <Link to="/" className={`underline-link ${isActive("/")}`}>
         HOME
       </Link>
       <Link to="/menu" className="underline-link">
@@ -34,10 +31,7 @@ const Header = () => {
         </Link>
       </div>
 
-      <Link 
-        to="/careers" 
-        className={`underline-link ${isActive('/careers')}`}
-      >
+      <Link to="/careers" className={`underline-link ${isActive("/careers")}`}>
         CAREERS
       </Link>
       <Link to="/reward" className="underline-link">
