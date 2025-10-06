@@ -137,8 +137,3 @@ p{
   .hero .info h1{
     color: var(--color-highlight);
   }
-  section{
-    @apply  mx-auto;
-  }
-
-  
