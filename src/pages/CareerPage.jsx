@@ -67,7 +67,7 @@ const CareerPage = () => {
   return (
     <>
       <section>
-        <h1 className="text-3xl md:text-4xl text-primary uppercase text-center pt-4 px-4">
+        <h1 className="text-3xl md:text-4xl text-primary uppercase text-center pt-4 px-4 font-bold">
           Careers at Mumbai Central
         </h1>
         <p className="text-center max-w-[700px] mx-auto mt-4 px-4">
@@ -76,7 +76,7 @@ const CareerPage = () => {
           to make a type specimen book.
         </p>
         {/* What's it like at Mumbai Central section */}
-        <div className="flex flex-col md:flex-row items-center justify-center text-white py-12 px-4 sm:px-6 md:px-12">
+        <div className="w-screen flex flex-col md:flex-row items-center justify-center text-white py-12 px-4 sm:px-6 md:px-12 bg-[var(--color-bg)]">
           <div className="relative w-full md:w-1/2 flex justify-center">
             <img
               src="/career-1.5.png"
@@ -84,7 +84,7 @@ const CareerPage = () => {
               className="rounded-lg object-cover w-full max-w-md h-auto"
             />
           </div>
-          <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-12">
+          <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-2">
             <h1 className="text-3xl md:text-4xl text-primary uppercase text-center md:text-left">
               What’s it like at Mumbai Central
             </h1>
@@ -160,7 +160,7 @@ const CareerPage = () => {
                   <div className="flex justify-between items-center px-6 py-4 font-bold text-lg">
                     <div className="flex items-center gap-3">
                       <Briefcase
-                    className={`${
+                        className={`${
                           open === pos.key ? "text-white" : "text-yellow-600"
                         }`}
                         size={22}

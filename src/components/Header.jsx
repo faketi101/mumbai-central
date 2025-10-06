@@ -15,9 +15,9 @@ const Header = () => {
   };
 
   return (
-    <header className="relative">
+    <header className="sticky top-0 z-50 bg-[var(--color-bg)] py-2">
       {/* Mobile and Tablet Header */}
-      <nav className="md:hidden w-full flex justify-between items-center mt-6 text-lg font-semibold px-4">
+      <nav className="md:hidden w-full flex justify-between items-center text-lg font-semibold px-4">
         <Link to="/">
           <img
             src="/logo.png"
@@ -25,7 +25,10 @@ const Header = () => {
             className="w-36 hover:opacity-90 transition-opacity"
           />
         </Link>
-        <button onClick={toggleMenu} className="text-primary focus:outline-none z-[10000]">
+        <button
+          onClick={toggleMenu}
+          className="text-primary focus:outline-none z-[10000]"
+        >
           {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </nav>
@@ -33,7 +36,11 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-white md:hidden flex flex-col justify-center items-center gap-8 z-[9999]">
-          <Link to="/" className={`underline-link ${isActive("/")}`} onClick={toggleMenu}>
+          <Link
+            to="/"
+            className={`underline-link ${isActive("/")}`}
+            onClick={toggleMenu}
+          >
             HOME
           </Link>
           <Link to="/menu" className="underline-link" onClick={toggleMenu}>
@@ -42,7 +49,11 @@ const Header = () => {
           <Link to="/about" className="underline-link" onClick={toggleMenu}>
             ABOUT
           </Link>
-          <Link to="/careers" className={`underline-link ${isActive("/careers")}`} onClick={toggleMenu}>
+          <Link
+            to="/careers"
+            className={`underline-link ${isActive("/careers")}`}
+            onClick={toggleMenu}
+          >
             CAREERS
           </Link>
           <Link to="/reward" className="underline-link" onClick={toggleMenu}>
@@ -55,7 +66,7 @@ const Header = () => {
       )}
 
       {/* Desktop Header */}
-      <nav className="hidden md:flex w-full justify-center items-center gap-10 mt-6 text-lg font-semibold">
+      <nav className="hidden md:flex w-full justify-center items-center gap-10 text-lg font-semibold">
         <Link to="/" className={`underline-link ${isActive("/")}`}>
           HOME
         </Link>
@@ -74,7 +85,10 @@ const Header = () => {
             />
           </Link>
         </div>
-        <Link to="/careers" className={`underline-link ${isActive("/careers")}`}>
+        <Link
+          to="/careers"
+          className={`underline-link ${isActive("/careers")}`}
+        >
           CAREERS
         </Link>
         <Link to="/reward" className="underline-link">

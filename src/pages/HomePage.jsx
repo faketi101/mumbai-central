@@ -23,8 +23,8 @@ const HomePage = () => {
       {/* Hero Section */}
       <div className="hero w-full flex flex-col gap-2 items-center px-4">
         <div className="info w-full flex flex-col gap-2 items-center mt-8 md:mt-12 text-center">
-          <h1 className="text-xl md:text-2xl font-bold">01702 292 200</h1>
-          <h1 className="text-xl md:text-2xl font-bold">
+          <h1 className="text-xl md:text-4xl font-bold">01702 292 200</h1>
+          <h1 className="text-xl md:text-4xl font-bold">
             7 days a week 4:30pm - 10pm
           </h1>
           <div className="buttons flex flex-col sm:flex-row gap-2 mt-2">
@@ -39,19 +39,12 @@ const HomePage = () => {
         <img
           src="/hero.png"
           alt="hero-image"
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-h-[550px]"
+          className="w-full"
         />
       </div>
 
       {/* About Section */}
-      <div className="flex flex-col md:flex-row-reverse items-center justify-center text-white py-12 px-6 md:px-12 md:max-w-[1200px] mx-auto">
-        <div className="relative w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
-          <img
-            src="/home-1.png"
-            alt="about-image"
-            className="rounded-lg object-cover w-full max-w-md h-auto"
-          />
-        </div>
+      <div className="w-screen flex flex-col md:flex-row items-center justify-center text-white py-12 px-6 md:px-12 bg-[var(--color-bg)]">
         <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-12">
           <h1 className="text-3xl md:text-4xl font-bold text-primary uppercase text-center md:text-left">
             About Mumbai Central
@@ -73,10 +66,17 @@ const HomePage = () => {
             lovingly cooked and delivered to your door
           </p>
         </div>
+        <div className="relative w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
+          <img
+            src="/home-1.png"
+            alt="about-image"
+            className="rounded-lg object-cover w-full max-w-md h-auto"
+          />
+        </div>
       </div>
 
       {/* CTA section */}
-      <div className="cta w-full flex flex-col items-center justify-center gap-4 bg-[#D19B22] py-12 px-4 mt-4">
+      <div className="cta w-screen flex flex-col items-center justify-center gap-4 bg-[var(--color-primary)] py-12 px-4 mt-4">
         <h1 className="text-3xl md:text-4xl text-white uppercase font-bold text-center">
           Join our rewards program
         </h1>
@@ -108,7 +108,7 @@ const HomePage = () => {
           <img
             src="/home-2.png"
             alt="People eating at a restaurant"
-            className="rounded-lg object-cover w-full max-w-md h-auto"
+            className="rounded-lg object-cover w-full max-w-2xl h-auto"
           />
         </div>
 
