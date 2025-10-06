@@ -67,31 +67,28 @@ const CareerPage = () => {
   return (
     <>
       <section>
-        <h1 className="text-4xl text-primary uppercase text-center pt-4">
+        <h1 className="text-3xl md:text-4xl text-primary uppercase text-center pt-4 px-4">
           Careers at Mumbai Central
         </h1>
-        <p className="text-center max-w-[700px] mx-auto mt-4">
+        <p className="text-center max-w-[700px] mx-auto mt-4 px-4">
           Lorem Ipsum has been the industry's standard dummy text ever since the
           1500s, when an unknown printer took a galley of type and scrambled it
           to make a type specimen book.
         </p>
         {/* What's it like at Mumbai Central section */}
-        <div className="flex flex-col md:flex-row items-center justify-center text-white py-12 px-6 md:px-12">
+        <div className="flex flex-col md:flex-row items-center justify-center text-white py-12 px-4 sm:px-6 md:px-12">
           <div className="relative w-full md:w-1/2 flex justify-center">
             <img
               src="/career-1.5.png"
               alt="about-image"
-              className="rounded-lg object-cover max-w-full h-auto"
+              className="rounded-lg object-cover w-full max-w-md h-auto"
             />
           </div>
-          <div
-            className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-12
-        "
-          >
-            <h1 className="text-4xl text-primary uppercase">
+          <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-12">
+            <h1 className="text-3xl md:text-4xl text-primary uppercase text-center md:text-left">
               What’s it like at Mumbai Central
             </h1>
-            <p className="text-secondary text-sm mt-4 py-2">
+            <p className="text-secondary text-sm mt-4 py-2 text-center md:text-left">
               Working at MUMBAI CENTRAL means being part of a close knit team
               that values quality, efficiency, and great customer service.
               <br /> <br />
@@ -108,7 +105,7 @@ const CareerPage = () => {
 
         {/* How we recruit section */}
 
-        <div className="bg-transparent py-16 px-6 md:px-12">
+        <div className="bg-transparent py-16 px-4 sm:px-6 md:px-12">
           <h2 className="text-center text-3xl md:text-4xl font-bold text-primary mb-4">
             HOW WE RECRUIT
           </h2>
@@ -141,74 +138,81 @@ const CareerPage = () => {
           </div>
         </div>
 
-
         {/* Positions we hire for section  */}
-        <div className="w-full bg-transparent text-white py-16 flex flex-col md:flex-row items-center justify-center px-6 md:px-16 gap-10">
-      {/* Left Section */}
-      <div className="w-full md:w-1/2">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center md:text-left">
-          POSITIONS WE HIRE FOR
-        </h2>
+        <div className="w-full bg-transparent text-white py-16 flex flex-col-reverse md:flex-row items-center justify-center px-4 sm:px-6 md:px-16 gap-10">
+          {/* Left Section */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center md:text-left">
+              POSITIONS WE HIRE FOR
+            </h2>
 
-        <div className="flex flex-col gap-4">
-          {positions.map((pos) => (
-            <div
-              key={pos.key}
-              className={`rounded-2xl overflow-hidden cursor-pointer transition-all ${
-                open === pos.key ? "bg-yellow-600 text-white" : "bg-white text-black"
-              }`}
-              onClick={() => toggle(pos.key)}
-            >
-              <div className="flex justify-between items-center px-6 py-4 font-bold text-lg">
-                <div className="flex items-center gap-3">
-                  <Briefcase
+            <div className="flex flex-col gap-4">
+              {positions.map((pos) => (
+                <div
+                  key={pos.key}
+                  className={`rounded-2xl overflow-hidden cursor-pointer transition-all ${
+                    open === pos.key
+                      ? "bg-yellow-600 text-white"
+                      : "bg-white text-black"
+                  }`}
+                  onClick={() => toggle(pos.key)}
+                >
+                  <div className="flex justify-between items-center px-6 py-4 font-bold text-lg">
+                    <div className="flex items-center gap-3">
+                      <Briefcase
                     className={`${
-                      open === pos.key ? "text-white" : "text-yellow-600"
-                    }`}
-                    size={22}
-                  />
-                  <span>{pos.title}</span>
+                          open === pos.key ? "text-white" : "text-yellow-600"
+                        }`}
+                        size={22}
+                      />
+                      <span>{pos.title}</span>
+                    </div>
+                    {open === pos.key ? (
+                      <ChevronUp size={20} />
+                    ) : (
+                      <ChevronDown size={20} />
+                    )}
+                  </div>
+                  {open === pos.key && (
+                    <div className="px-6 pb-5 text-sm leading-relaxed">
+                      {pos.description}
+                    </div>
+                  )}
                 </div>
-                {open === pos.key ? (
-                  <ChevronUp size={20} />
-                ) : (
-                  <ChevronDown size={20} />
-                )}
-              </div>
-              {open === pos.key && (
-                <div className="px-6 pb-5 text-sm leading-relaxed">
-                  {pos.description}
+              ))}
+
+              <button
+                onClick={() => setShowJoinForm(true)}
+                className="mt-6 bg-yellow-600 text-white font-semibold py-3 px-8 rounded-xl hover:bg-yellow-700 transition w-full sm:w-fit self-center md:self-start"
+              >
+                APPLY NOW
+              </button>
+
+              {showJoinForm && (
+                <div
+                  className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+                  onClick={() => setShowJoinForm(false)}
+                >
+                  <div
+                    className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <JoinOurTeamForm onClose={() => setShowJoinForm(false)} />
+                  </div>
                 </div>
               )}
             </div>
-          ))}
+          </div>
 
-          <button 
-            onClick={() => setShowJoinForm(true)}
-            className="mt-6 bg-yellow-600 text-white font-semibold py-3 px-8 rounded-xl hover:bg-yellow-700 transition w-fit self-center md:self-start"
-          >
-            APPLY NOW
-          </button>
-          
-          {showJoinForm && (
-            <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50 p-4" onClick={() => setShowJoinForm(false)}>
-              <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
-                <JoinOurTeamForm onClose={() => setShowJoinForm(false)} />
-              </div>
-            </div>
-          )}
+          {/* Right Section - Image */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img
+              src="/career-2.png"
+              alt="Hiring illustration"
+              className="rounded-2xl w-full max-w-md"
+            />
+          </div>
         </div>
-      </div>
-
-      {/* Right Section - Image */}
-      <div className="w-full md:w-1/2 flex justify-center">
-        <img
-          src="/career-2.png"
-          alt="Hiring illustration"
-          className="rounded-2xl max-w-full md:max-w-md"
-        />
-      </div>
-    </div>
       </section>
     </>
   );

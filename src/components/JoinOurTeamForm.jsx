@@ -21,19 +21,19 @@ const JoinOurTeamForm = () => {
   ];
 
   return (
-    <section className="bg-[#FFFBEF] min-h-screen flex flex-col items-center justify-center py-16 px-6">
+    <div className="p-4 sm:p-6 md:p-8">
       {/* Heading */}
-      <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-yellow-600">
+      <div className="text-center mb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-600">
           JOIN OUR TEAM
         </h2>
-        <p className="text-gray-700 mt-2">
+        <p className="text-gray-700 mt-2 text-sm sm:text-base">
           Please complete and submit this application form.
         </p>
       </div>
 
-      {/* Form Card */}
-      <form className="bg-white rounded-3xl border border-yellow-600 shadow-[0_6px_0_#E0A100] w-full max-w-2xl p-8 space-y-6 text-secondary font-nato">
+      {/* Form Content */}
+      <form className="w-full space-y-6 text-secondary font-nato">
         {/* Position */}
         <div>
           <label className="flex items-center text-gray-700 mb-2">
@@ -61,7 +61,7 @@ const JoinOurTeamForm = () => {
         </div>
 
         {/* Full Name + Email */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="flex items-center text-gray-700 mb-2">
               <User className="text-yellow-600 mr-2" size={18} />
@@ -149,7 +149,7 @@ const JoinOurTeamForm = () => {
           SUBMIT APPLICATION
         </button>
       </form>
-    </section>
+    </div>
   );
 };
 
