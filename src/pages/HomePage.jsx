@@ -37,7 +37,7 @@ const HomePage = () => {
           </div>
         </div>
         <img
-          src="/hero.png"
+          src="/shutterstock_709250500 (2).png"
           alt="hero-image"
           className="w-full"
         />
@@ -68,7 +68,7 @@ const HomePage = () => {
         </div>
         <div className="relative w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
           <img
-            src="/home-1.png"
+            src="/about MC.jpg"
             alt="about-image"
             className="rounded-lg object-cover w-full max-w-md h-auto"
           />
@@ -106,9 +106,9 @@ const HomePage = () => {
         {/* Left Image Section */}
         <div className="relative w-full md:w-1/2 flex justify-center">
           <img
-            src="/home-2.png"
+            src="/contact us MC.jpg"
             alt="People eating at a restaurant"
-            className="rounded-lg object-cover w-full max-w-2xl h-auto"
+            className="rounded-lg object-cover w-full max-w-2xl h-auto md:max-h-[400px]"
           />
         </div>
 

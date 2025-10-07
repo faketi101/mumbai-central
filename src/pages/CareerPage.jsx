@@ -79,7 +79,7 @@ const CareerPage = () => {
         <div className="w-screen flex flex-col md:flex-row items-center justify-center text-white py-12 px-4 sm:px-6 md:px-12 bg-[var(--color-bg)]">
           <div className="relative w-full md:w-1/2 flex justify-center">
             <img
-              src="/career-1.5.png"
+              src="/whats it like.png"
               alt="about-image"
               className="rounded-lg object-cover w-full max-w-md h-auto"
             />
@@ -207,7 +207,7 @@ const CareerPage = () => {
           {/* Right Section - Image */}
           <div className="w-full md:w-1/2 flex justify-center">
             <img
-              src="/career-2.png"
+              src="/positions we hire for MC.jpg"
               alt="Hiring illustration"
               className="rounded-2xl w-full max-w-md"
             />
