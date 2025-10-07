@@ -7,9 +7,10 @@ import {
   Upload,
   ChevronDown,
   HelpCircle,
+  X,
 } from "lucide-react";
 
-const JoinOurTeamForm = () => {
+const JoinOurTeamForm = ({ onClose }) => {
   const [selectedPosition, setSelectedPosition] = useState("");
   const [accepted, setAccepted] = useState(false);
 
@@ -21,7 +22,15 @@ const JoinOurTeamForm = () => {
   ];
 
   return (
-    <div className="p-4 sm:p-6 md:p-8">
+    <div className="p-4 sm:p-6 md:p-8 relative">
+      {/* Close Button */}
+      <button 
+        onClick={onClose}
+        className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-colors"
+        aria-label="Close form"
+      >
+        <X size={24} />
+      </button>
       {/* Heading */}
       <div className="text-center mb-8">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-600">

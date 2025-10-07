@@ -1,24 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Phone, Clock, MapPin, ArrowRight } from "lucide-react";
-import Modal from "../components/Modal";
-import JoinOurTeamForm from "../components/JoinOurTeamForm";
+import SignUpModal from "../components/SignUpModal";
 
 const HomePage = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsModalOpen(true);
-    }, 1000); // Open modal after 1 second
-
-    return () => clearTimeout(timer);
-  }, []);
-
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
   return (
     <section className="w-full mx-auto">
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <JoinOurTeamForm />
-      </Modal>
 
       {/* Hero Section */}
       <div className="hero w-full flex flex-col gap-2 items-center px-4">
@@ -37,7 +24,7 @@ const HomePage = () => {
           </div>
         </div>
         <img
-          src="/shutterstock_709250500 (2).png"
+          src="/MC homepage Image png.png"
           alt="hero-image"
           className="w-full"
         />
@@ -85,18 +72,18 @@ const HomePage = () => {
           redeemable loyalty points with every order
         </p>
 
-        <div className="div flex flex-col sm:flex-row gap-4 mt-4">
-          <a
-            href="#"
-            className="uppercase text-primary bg-white rounded px-6 py-3 sm:px-8 sm:py-4 text-center"
+        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+          <button
+            onClick={() => setIsSignUpModalOpen(true)}
+            className="uppercase text-primary bg-white rounded px-6 py-3 sm:px-8 sm:py-4 text-center cursor-pointer"
           >
             Sign up
-          </a>
+          </button>
           <a
             href="#"
             className="uppercase text-white bg-transparent border border-white rounded px-6 py-3 sm:px-8 sm:py-4"
           >
-            View Menu{" "}
+            View Menu
           </a>
         </div>
       </div>
@@ -168,6 +155,12 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      
+      {/* Sign Up Modal */}
+      <SignUpModal 
+        isOpen={isSignUpModalOpen} 
+        onClose={() => setIsSignUpModalOpen(false)} 
+      />
     </section>
   );
 };
