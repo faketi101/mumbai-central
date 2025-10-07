@@ -44,7 +44,7 @@ const Header = () => {
             HOME
           </Link>
           <a
-            href="https://tillin.netlify.app/assets/images/marge.pdf"
+            href="/mumbai central menu (2).pdf"
             target="_blank"
             className="underline-link"
             onClick={toggleMenu}
@@ -76,7 +76,7 @@ const Header = () => {
           HOME
         </Link>
         <a
-            href="https://tillin.netlify.app/assets/images/marge.pdf"
+            href="/mumbai central menu (2).pdf"
             target="_blank"
             className="underline-link"
             onClick={toggleMenu}
