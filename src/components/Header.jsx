@@ -61,8 +61,8 @@ const Header = () => {
           >
             CAREERS
           </Link>
-          <a href="/#reward" className="underline-link" onClick={toggleMenu}>
-            REWARD
+          <a href="/#rewards" className="underline-link" onClick={toggleMenu}>
+            REWARDS
           </a>
           <a href="/#contact" className="underline-link" onClick={toggleMenu}>
             CONTACT
@@ -101,8 +101,8 @@ const Header = () => {
         >
           CAREERS
         </Link>
-        <a href="/#reward" className="underline-link">
-          REWARD
+        <a href="/#rewards" className="underline-link">
+          REWARDS
         </a>
         <a href="/#contact" className="underline-link">
           CONTACT
