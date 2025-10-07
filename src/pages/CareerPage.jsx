@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FileText, Users, ClipboardCheck, Handshake } from "lucide-react";
 import { ChevronDown, ChevronUp, Briefcase } from "lucide-react";
 import JoinOurTeamForm from "../components/JoinOurTeamForm";
+import { useEffect } from "react";
 
 const steps = [
   {
@@ -64,6 +65,9 @@ const CareerPage = () => {
     setOpen(open === key ? null : key);
   };
 
+  useEffect(() => {
+    window && window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section>

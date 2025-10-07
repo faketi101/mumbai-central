@@ -43,12 +43,17 @@ const Header = () => {
           >
             HOME
           </Link>
-          <Link to="/menu" className="underline-link" onClick={toggleMenu}>
+          <a
+            href="https://tillin.netlify.app/assets/images/marge.pdf"
+            target="_blank"
+            className="underline-link"
+            onClick={toggleMenu}
+          >
             MENU
-          </Link>
-          <Link to="/about" className="underline-link" onClick={toggleMenu}>
+          </a>
+          <a href="/#about" className="underline-link" onClick={toggleMenu}>
             ABOUT
-          </Link>
+          </a>
           <Link
             to="/careers"
             className={`underline-link ${isActive("/careers")}`}
@@ -56,12 +61,12 @@ const Header = () => {
           >
             CAREERS
           </Link>
-          <Link to="/reward" className="underline-link" onClick={toggleMenu}>
+          <a href="/#reward" className="underline-link" onClick={toggleMenu}>
             REWARD
-          </Link>
-          <Link to="/contact" className="underline-link" onClick={toggleMenu}>
+          </a>
+          <a href="/#contact" className="underline-link" onClick={toggleMenu}>
             CONTACT
-          </Link>
+          </a>
         </div>
       )}
 
@@ -70,12 +75,17 @@ const Header = () => {
         <Link to="/" className={`underline-link ${isActive("/")}`}>
           HOME
         </Link>
-        <Link to="/menu" className="underline-link">
-          MENU
-        </Link>
-        <Link to="/about" className="underline-link">
+        <a
+            href="https://tillin.netlify.app/assets/images/marge.pdf"
+            target="_blank"
+            className="underline-link"
+            onClick={toggleMenu}
+          >
+            MENU
+          </a>
+        <a href="/#about" className="underline-link">
           ABOUT
-        </Link>
+        </a>
         <div className="mx-6">
           <Link to="/">
             <img
@@ -91,12 +101,12 @@ const Header = () => {
         >
           CAREERS
         </Link>
-        <Link to="/reward" className="underline-link">
+        <a href="/#reward" className="underline-link">
           REWARD
-        </Link>
-        <Link to="/contact" className="underline-link">
+        </a>
+        <a href="/#contact" className="underline-link">
           CONTACT
-        </Link>
+        </a>
       </nav>
     </header>
   );

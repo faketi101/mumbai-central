@@ -6,9 +6,11 @@ const HomePage = () => {
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
   return (
     <section className="w-full mx-auto">
-
       {/* Hero Section */}
-      <div className="hero w-full flex flex-col gap-2 items-center px-4">
+      <div
+        id="hero"
+        className="hero w-full flex flex-col gap-2 items-center px-4"
+      >
         <div className="info w-full flex flex-col gap-2 items-center mt-8 md:mt-12 text-center">
           <h1 className="text-xl md:text-4xl font-bold">01702 292 200</h1>
           <h1 className="text-xl md:text-4xl font-bold">
@@ -21,6 +23,14 @@ const HomePage = () => {
             <a href="#" className="btn">
               ALLERGENS
             </a>
+            <a
+              href="https://tillin.netlify.app/assets/images/marge.pdf"
+              target="_blank"
+              className="btn"
+            >
+              {" "}
+              View Menu
+            </a>
           </div>
         </div>
         <img
@@ -31,7 +41,10 @@ const HomePage = () => {
       </div>
 
       {/* About Section */}
-      <div className="w-screen flex flex-col md:flex-row items-center justify-center text-white py-12 px-6 md:px-12 bg-[var(--color-bg)]">
+      <div
+        id="about"
+        className="w-screen flex flex-col md:flex-row items-center justify-center text-white py-12 px-6 md:px-12 bg-[var(--color-bg)]"
+      >
         <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-12">
           <h1 className="text-3xl md:text-4xl font-bold text-primary uppercase text-center md:text-left">
             About Mumbai Central
@@ -63,7 +76,10 @@ const HomePage = () => {
       </div>
 
       {/* CTA section */}
-      <div className="cta w-screen flex flex-col items-center justify-center gap-4 bg-[var(--color-primary)] py-12 px-4 mt-4">
+      <div
+        id="reward"
+        className="cta w-screen flex flex-col items-center justify-center gap-4 bg-[var(--color-primary)] py-12 px-4 mt-4"
+      >
         <h1 className="text-3xl md:text-4xl text-white uppercase font-bold text-center">
           Join our rewards program
         </h1>
@@ -80,7 +96,8 @@ const HomePage = () => {
             Sign up
           </button>
           <a
-            href="#"
+            href="https://tillin.netlify.app/assets/images/marge.pdf"
+            target="_blank"
             className="uppercase text-white bg-transparent border border-white rounded px-6 py-3 sm:px-8 sm:py-4"
           >
             View Menu
@@ -89,7 +106,10 @@ const HomePage = () => {
       </div>
 
       {/* Contact Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center text-white py-12 px-6 md:px-12">
+      <div
+        id="contact"
+        className="flex flex-col md:flex-row items-center justify-center text-white py-12 px-6 md:px-12"
+      >
         {/* Left Image Section */}
         <div className="relative w-full md:w-1/2 flex justify-center">
           <img
@@ -149,17 +169,21 @@ const HomePage = () => {
               <ArrowRight className="w-5 h-5" />
             </button>
 
-            <button className="border border-yellow-600 hover:bg-yellow-600 hover:text-white text-yellow-500 font-semibold py-3 px-6 md:px-8 rounded-lg transition">
+            <a
+              href="https://tillin.netlify.app/assets/images/marge.pdf"
+              target="_blank"
+              className="border border-yellow-600 hover:bg-yellow-600 hover:text-white text-yellow-500 font-semibold py-3 px-6 md:px-8 rounded-lg transition"
+            >
               VIEW MENU
-            </button>
+            </a>
           </div>
         </div>
       </div>
-      
+
       {/* Sign Up Modal */}
-      <SignUpModal 
-        isOpen={isSignUpModalOpen} 
-        onClose={() => setIsSignUpModalOpen(false)} 
+      <SignUpModal
+        isOpen={isSignUpModalOpen}
+        onClose={() => setIsSignUpModalOpen(false)}
       />
     </section>
   );
