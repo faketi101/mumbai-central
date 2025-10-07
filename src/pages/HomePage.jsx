@@ -43,13 +43,13 @@ const HomePage = () => {
       {/* About Section */}
       <div
         id="about"
-        className="w-screen flex flex-col md:flex-row items-center justify-center text-white py-12 px-6 md:px-12 bg-[var(--color-bg)]"
+        className="w-screen flex flex-col md:flex-row items-center justify-center text-white py-12 px-6 md:mx-12 bg-[var(--color-bg)] md:max-w-[1170px] md:mx-auto md:justify-evenly md:gap-6"
       >
-        <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-12">
+        <div className="w-full md:w-2/3 mt-8 md:mt-0 md:pl-12">
           <h1 className="text-3xl md:text-4xl font-bold text-primary uppercase text-center md:text-left">
             About Mumbai Central
           </h1>
-          <p className="text-secondary text-sm mt-4 text-center md:text-left">
+          <p className="text-secondary text-sm mt-4 text-center md:text-left px-4">
             At Mumbai Central, food is more than something we cook. It’s a love
             letter to home. Inspired by the bustling streets of Mumbai and
             beyond, the comfort of family kitchens, our takeaway was born from a
@@ -66,7 +66,7 @@ const HomePage = () => {
             lovingly cooked and delivered to your door
           </p>
         </div>
-        <div className="relative w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
+        <div className="relative w-full md:w-1/3 flex justify-center mt-8 md:mt-0">
           <img
             src="/about MC.jpg"
             alt="about-image"
@@ -108,10 +108,10 @@ const HomePage = () => {
       {/* Contact Section */}
       <div
         id="contact"
-        className="flex flex-col md:flex-row items-center justify-center text-white py-12 px-6 md:px-12"
+        className="flex flex-col md:flex-row items-center justify-center text-white py-12 px-6 md:px-12 md:max-w-[1170px] md:mx-auto justify-evenly md:gap-6"
       >
         {/* Left Image Section */}
-        <div className="relative w-full md:w-1/2 flex justify-center">
+        <div className="relative w-full md:w-1/3 flex justify-center">
           <img
             src="/contact us MC.jpg"
             alt="People eating at a restaurant"
@@ -120,7 +120,7 @@ const HomePage = () => {
         </div>
 
         {/* Right Content Section */}
-        <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-12 ">
+        <div className="w-full md:w-2/3 mt-8 md:mt-0 md:pl-12 ">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 text-center md:text-left">
             CONTACT US
           </h2>

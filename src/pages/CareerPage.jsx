@@ -74,21 +74,17 @@ const CareerPage = () => {
         <h1 className="text-3xl md:text-4xl text-primary uppercase text-center pt-4 px-4 font-bold">
           Careers at Mumbai Central
         </h1>
-        <p className="text-center max-w-[700px] mx-auto mt-4 px-4">
-          Lorem Ipsum has been the industry's standard dummy text ever since the
-          1500s, when an unknown printer took a galley of type and scrambled it
-          to make a type specimen book.
-        </p>
+      
         {/* What's it like at Mumbai Central section */}
-        <div className="w-screen flex flex-col md:flex-row items-center justify-center text-white py-12 px-4 sm:px-6 md:px-12 bg-[var(--color-bg)]">
-          <div className="relative w-full md:w-1/2 flex justify-center">
+        <div className="w-screen flex flex-col md:flex-row items-center justify-center text-white py-12 px-4 sm:px-6 md:px-12 bg-[var(--color-bg)] md:max-w-[1170px] md:mx-auto md:justify-evenly md:gap-6">
+          <div className="relative w-full md:w-1/3 flex justify-center">
             <img
               src="/whats it like.png"
               alt="about-image"
               className="rounded-lg object-cover w-full max-w-md h-auto"
             />
           </div>
-          <div className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-2">
+          <div className="w-full md:w-2/3 mt-8 md:mt-0 md:pl-2">
             <h1 className="text-3xl md:text-4xl text-primary uppercase text-center md:text-left">
               What’s it like at Mumbai Central
             </h1>
@@ -143,9 +139,9 @@ const CareerPage = () => {
         </div>
 
         {/* Positions we hire for section  */}
-        <div className="w-full bg-transparent text-white py-16 flex flex-col-reverse md:flex-row items-center justify-center px-4 sm:px-6 md:px-16 gap-10">
+        <div className="w-full bg-transparent text-white py-16 flex flex-col-reverse md:flex-row items-center justify-center px-4 sm:px-6 md:px-16 gap-10 md:max-w-[1170px] md:mx-auto md:justify-evenly">
           {/* Left Section */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-2/3">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center md:text-left">
               POSITIONS WE HIRE FOR
             </h2>
@@ -209,7 +205,7 @@ const CareerPage = () => {
           </div>
 
           {/* Right Section - Image */}
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-full md:w-1/3 flex justify-center">
             <img
               src="/positions we hire for MC.jpg"
               alt="Hiring illustration"
