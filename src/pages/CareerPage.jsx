@@ -81,7 +81,7 @@ const CareerPage = () => {
             <img
               src="/whats it like rough-min.png"
               alt="about-image"
-              className="rounded-lg object-cover w-full max-w-md h-auto"
+              className="rounded-lg object-cover h-fit-content"
             />
           </div>
           <div className="w-full md:w-1.5/3 mt-8 md:mt-0 md:pl-2">
@@ -209,7 +209,7 @@ const CareerPage = () => {
             <img
               src="/positions we hire for MC rough-min.png"
               alt="Hiring illustration"
-              className="rounded-2xl w-full max-w-md"
+              className="rounded-lg object-cover h-fit-content"
             />
           </div>
         </div>

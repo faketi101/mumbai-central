@@ -11,7 +11,12 @@ const HomePage = () => {
         id="hero"
         className="hero w-full flex flex-col gap-2 items-center px-4"
       >
-        <div className="info w-full flex flex-col gap-2 items-center mt-8 md:mt-12 text-center">
+        <img
+          src="/logo.png"
+          alt="logo-image"
+          className="w-[275px] sm:hidden"
+        />
+        <div className="info w-full flex flex-col gap-2 items-center mt-8 md:mt-12 text-center sm:ml-[60px]">
           <h1 className="text-xl md:text-4xl font-bold">01702 292 200</h1>
           <h1 className="text-xl md:text-4xl font-bold">
             7 days a week 4:30pm - 10pm
@@ -49,7 +54,7 @@ const HomePage = () => {
           <h1 className="text-3xl md:text-4xl font-bold text-primary uppercase text-center md:text-left">
             About Mumbai Central
           </h1>
-          <p className="text-secondary text-sm mt-4 text-center md:text-left px-0">
+          <p className="text-secondary text-sm mt-4 text-justify px-0">
             At Mumbai Central, food is more than something we cook. It’s a love
             letter to home. Inspired by the bustling streets of Mumbai and
             beyond, the comfort of family kitchens, our takeaway was born from a
@@ -70,7 +75,7 @@ const HomePage = () => {
           <img
             src="/about MC rough-min.png"
             alt="about-image"
-            className="rounded-lg object-cover w-full max-w-md h-auto"
+            className="rounded-lg object-cover h-fit-content"
           />
         </div>
       </div>
@@ -115,7 +120,7 @@ const HomePage = () => {
           <img
             src="/contact us MC image rough-min.png"
             alt="People eating at a restaurant"
-            className="rounded-lg object-cover w-full max-w-2xl h-auto md:max-h-[400px]"
+            className="rounded-lg object-cover h-fit-content"
           />
         </div>
 

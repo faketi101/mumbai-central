@@ -71,7 +71,7 @@ const Header = () => {
       )}
 
       {/* Desktop Header */}
-      <nav className="hidden md:flex w-full justify-center items-center gap-10 text-lg font-semibold">
+      <nav className="hidden md:flex w-full justify-center items-center gap-10 text-lg font-semibold sm:ml-[90px]">
         <Link to="/" className={`underline-link ${isActive("/")}`}>
           HOME
         </Link>
