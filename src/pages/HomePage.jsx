@@ -14,7 +14,7 @@ const HomePage = () => {
         <img
           src="/logo.png"
           alt="logo-image"
-          className="w-[275px] sm:hidden"
+          className="w-[275px] sm:hidden hero-mobile-logo"
         />
         <div className="info w-full flex flex-col gap-2 items-center mt-8 md:mt-12 text-center sm:ml-[60px]">
           <h1 className="text-xl md:text-4xl font-bold">01702 292 200</h1>
@@ -48,7 +48,7 @@ const HomePage = () => {
       {/* About Section */}
       <div
         id="about"
-        className="w-screen flex flex-col md:flex-row items-center justify-center text-white py-12 px-6 md:mx-12 bg-[var(--color-bg)] md:max-w-[1170px] md:mx-auto md:justify-evenly md:gap-6"
+        className="w-screen flex flex-col md:flex-row items-center justify-center text-white pb-12 px-6 md:mx-12 bg-[var(--color-bg)] md:max-w-[1170px] md:mx-auto md:justify-evenly md:gap-6"
       >
         <div className="w-full md:w-1.5/3 mt-8 md:mt-0 md:pl-12">
           <h1 className="text-3xl md:text-4xl font-bold text-primary uppercase text-center md:text-left">
@@ -177,7 +177,7 @@ const HomePage = () => {
             <a
               href="/mumbai central menu (2).pdf"
               target="_blank"
-              className="border border-yellow-600 hover:bg-yellow-600 hover:text-white text-yellow-500 font-semibold py-3 px-6 md:px-8 rounded-lg transition"
+              className="border border-yellow-600 hover:bg-yellow-600 hover:text-white text-primary font-semibold py-3 px-6 md:px-8 rounded-lg transition text-center"
             >
               VIEW MENU
             </a>
